@@ -1,0 +1,36 @@
+
+<div class="main">
+  <div class="titulo">
+    <p>{{ messages.usersHome.crearUser.titulo }}</p>
+  </div>
+    <form [formGroup]="myFormCreate" (ngSubmit)="onSubmit()">
+      <div class="cuerpo ml-5 mr-5 mb-10">
+        <div class="relative mb-4">
+          <label for="name" class="leading-7 text-sm text-gray-600">{{ messages.usersHome.crearUser.name }}</label>
+          <input type="text" id="name" formControlName="name" placeholder=" {{ messages.usersHome.crearUser.placeHolder.name}} "
+                  class="w-full bg-white rounded border  focus:ring-2  text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+        <div class="relative mb-4">
+          <label for="email" class="leading-7 text-sm text-gray-600">{{ messages.usersHome.crearUser.email }}</label>
+          <input type="text" id="email" formControlName="email" placeholder=" {{ messages.usersHome.crearUser.placeHolder.email}} "
+                  class="w-full bg-white rounded border  focus:ring-2  text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+        <div class="relative mb-4">
+          <label for="password" class="leading-7 text-sm text-gray-600">{{ messages.usersHome.crearUser.password }}</label>
+          <input type="password" id="password" formControlName="password" placeholder=" {{ messages.usersHome.crearUser.placeHolder.password}} "
+                  class="w-full bg-white rounded border  focus:ring-2  text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+        <div class="relative mb-4">
+          <label for="passwordConfirm" class="leading-7 text-sm text-gray-600">{{ messages.usersHome.crearUser.confirmPassword }}</label>
+          <input type="password" id="passwordConfirm" formControlName="passwordConfirm" placeholder=" {{ messages.usersHome.crearUser.placeHolder.confirmPassword}} "
+                  class="w-full bg-white rounded border  focus:ring-2  text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+      </div>
+      <div mat-dialog-actions class="botones flex justify-center">
+        <div>
+          <button type="button" class="boton boton-cerrar" cdkFocusInitial (click)="cerrarModal()">{{ messages.commons.cancelar }}</button>
+          <button type="submit" class="boton boton-enviar">{{ messages.commons.enviar }}</button>
+        </div>
+      </div>
+    </form>
+</div>

@@ -1,0 +1,29 @@
+
+<p class="titulo">{{ messages.usersHome.users.titulo }}</p>
+<div class="main">
+  <div class="datos">
+    <div class="avatar">
+      <img  [src]="data.avatar" alt="avatar">
+    </div>
+    <div>
+      <p class="titulo-label font-bold">{{ messages.usersHome.crearUser.email }}: </p><p class="text-gray-600">{{data.email}}</p>
+    </div>
+    <hr>
+    <div >
+      <p class="titulo-label font-bold">{{ messages.usersHome.crearUser.password }}: </p><p class="text-gray-600">{{data.password}}</p>
+    </div>
+    <hr>
+    <div >
+      <p class="titulo-label font-bold">{{ messages.usersHome.crearUser.name }}: </p><p class="text-gray-600">{{data.name}}</p>
+    </div>
+    <hr>
+    <div >
+      <p class="titulo-label font-bold">{{ messages.usersHome.crearUser.role }}: </p><p class="text-gray-600">{{data.role}}</p>
+    </div>
+    <hr>
+
+  </div>
+</div>
+<div mat-dialog-actions class="botones">
+  <button class="boton-cerrar" mat-button cdkFocusInitial (click)="cerrarModal()">{{ messages.commons.ok }}</button>
+</div>

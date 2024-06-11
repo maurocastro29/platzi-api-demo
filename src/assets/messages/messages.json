@@ -1,0 +1,129 @@
+{
+  "commons": {
+    "enviar": "Enviar",
+    "cancelar": "Cancelar",
+    "continuar": "Continuar",
+    "ok": "Ok"
+  },
+  "header": {
+    "titulo": "PLATZI API DEMO",
+    "menuHome": "Home",
+    "menuProducts": "Products",
+    "menuUsers": "Users",
+    "menuAbout": "About",
+    "menuContact": "Contact"
+  },
+  "home":{
+    "tarjeta":{
+      "msgTarjeta1": "Proyecto de consumo de la",
+      "msgTarjeta2": "PLATZI FAKE STORE API",
+      "msgTarjeta3": "Usando angular en la version 16"
+    },
+    "serviciosConsumidos": "Servicios consumidos en este proyecto",
+    "users": {
+      "titulo": "Users",
+      "getAll": "Get all users",
+      "getSingle": "Get single user",
+      "createUser": "Create user",
+      "updateUser": "Update user",
+      "checkEmail": "Check email user"
+    },
+    "products":{
+      "titulo": "Products",
+      "getAll": "Get all products",
+      "getSingle": "Get single poducts",
+      "createProduct": "Create product",
+      "updateProduct": "Update product",
+      "deleteProduct": "Delete product"
+    },
+    "categories":{
+      "titulo": "Categories",
+      "getAll": "Get all categories",
+      "getSingle": "Get single category",
+      "getProductByCategory": "Get all products by category"
+    },
+    "request": "Request",
+    "response": "Response",
+    "body": "# Body",
+    "http":{
+      "get": "[GET]",
+      "post": "[POST]",
+      "put": "[PUT]",
+      "delete": "[DELETE]"
+    }
+  },
+  "contact":{
+    "lblTitulo": "Aqui podrás encontrar un poco mas sobre mí",
+    "contactame": "Contactame por aquí",
+    "enviameCorreo": "Envíame un correo",
+    "escribeme": "Puedes escribirme aquí"
+  },
+  "myModal":{
+    "precio": "Precio",
+    "eliminar": "Eliminar",
+    "editar": "Editar",
+    "ok": "Ok"
+  },
+  "crearProducto": {
+    "titulo": "Crear nuevo producto",
+    "lblTitulo":"Titulo",
+    "lblPrecio":"Precio",
+    "lblDescripcion":"Descripcion",
+    "btnEnviar":"Enviar",
+    "placeHolder": {
+      "titulo": "Titulo del nuevo producto",
+      "precio": "Precio del nuevo producto",
+      "descripcion": "Descripcion del nuevo producto"
+    }
+  },
+  "editarProducto": {
+    "titulo": "Editar producto",
+    "lblTitulo":"Titulo",
+    "lblPrecio":"Precio",
+    "lblDescripcion":"Descripcion",
+    "btnEnviar":"Enviar",
+    "cancelar": "Cancelar",
+    "msgError": "Error al actualizar producto",
+    "placeHolder": {
+      "titulo": "Nuevo Titulo del producto",
+      "precio": "Nuevo precio del producto",
+      "descripcion": "Nueva descripcion del producto"
+    }
+  },
+  "products":{
+    "filtrarCategoria": "Filtrar por categoria",
+    "buscar": "Buscar",
+    "items": "Items por página:",
+    "verMas": "Ver más"
+  },
+  "usersHome": {
+    "users": {
+      "titulo": "Datos usuarios",
+      "items": "Items por página:",
+      "name":"Name",
+      "email": "Email",
+      "role": "Role",
+      "actions": "Actions"
+    },
+    "crearUser": {
+      "titulo": "Crear usuario",
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "enviar": "Enviar",
+      "cancelar": "Cancelar",
+      "role": "Role",
+      "ok": "Ok",
+      "placeHolder": {
+        "name": "Ingrese un nombre",
+        "email": "Ingrese un email",
+        "password": "Ingrese una contraseña",
+        "confirmPassword": "Ingrese nuevamente la contraseña"
+      }
+    },
+    "updateUser": {
+      "titulo": "Editar usuario"
+    }
+  }
+}

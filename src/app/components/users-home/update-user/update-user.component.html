@@ -1,0 +1,26 @@
+
+<div class="main">
+
+  <form [formGroup]="myFormUpdate" (ngSubmit)="onSubmit()">
+    <div class="titulo">
+      <h2>{{ messages.usersHome.updateUser.titulo }}</h2>
+    </div>
+    <div class="cuerpo">
+      <div class="relative mb-4">
+        <label for="name" class="leading-7 text-sm text-gray-600">{{ messages.usersHome.crearUser.name }}</label>
+        <input type="text" id="name" formControlName="name" [value]="data.name" required class="w-full bg-white rounded border  focus:ring-2  text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+      <div class="relative mb-4">
+        <label for="email" class="leading-7 text-sm text-gray-600">{{ messages.usersHome.crearUser.email }}</label>
+        <input type="text" id="email" formControlName="email" [value]="data.email" required class="w-full bg-white rounded border  focus:ring-2  text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+    </div>
+    <div mat-dialog-actions class="botones flex justify-center">
+      <div>
+        <button type="button" class="boton boton-cerrar" cdkFocusInitial (click)="cerrarModal()">{{ messages.commons.cancelar }}</button>
+        <button type="submit" class="boton boton-enviar" (click)="onSubmit()">{{ messages.commons.enviar }}</button>
+      </div>
+    </div>
+  </form>
+</div>
+

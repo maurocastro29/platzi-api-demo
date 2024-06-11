@@ -1,0 +1,18 @@
+<div class="main">
+  <div class="titulo">
+    <h2>{{data.titulo}}</h2>
+  </div>
+  <div class="description-card">
+    <div >
+      <p> {{data.descripcion}} </p>
+    </div>
+    <div >
+      <p> {{messages.myModal.precio}}: {{data.precio}} </p>
+    </div>
+  </div>
+  <div mat-dialog-actions class="botones">
+    <button mat-button (click)="eliminarProducto()">{{messages.myModal.eliminar}}</button>
+    <button mat-button (click)="onNoClick()">{{messages.myModal.editar}}</button>
+    <button mat-button cdkFocusInitial (click)="cerrarModal()">{{messages.myModal.ok}}</button>
+  </div>
+</div>

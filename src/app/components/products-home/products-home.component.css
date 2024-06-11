@@ -1,0 +1,141 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+.contenido{
+  padding: 15px;
+}
+.superior{
+  margin-bottom: 15px;
+}
+.form-control{
+  padding: 6px;
+  border: 1px solid #C1C1C1;
+  font-size: 1.15em;
+  border-radius: 5px 0px 0px 5px;
+}
+.btn-search{
+  position:relative;
+  padding: 7px;
+  background-color: #206000;
+  color: #f9f9f9;
+  border-radius: 0px 5px 5px 0px;
+  float: right;
+}
+.btn-search:hover{
+  background-color: #2c7c04;
+}
+.items-por-pagina{
+  display: block;
+  margin-top: 15px;
+}
+.cards{
+	display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(5, minmax(12%, 1fr));
+}
+.card{
+  border: 1px solid #C1C1C1;
+  margin-bottom: 10px;
+  height: 350px;
+  margin-top: 10px;
+  box-shadow: 4px 4px 10px #206000;
+}
+.titulo-card{
+  position: relative;
+  height: 50px;
+  background-color: #206000;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  text-align: center;
+  color: #e7f6cc;
+  overflow: hidden;
+}
+.titulo-card h4{
+  display: inline;
+}
+.description-card{
+  background-color: #e7f6cc;
+  height: 234px;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+.footer-card{
+  position: relative;
+  padding: 2px;
+  background-color: #bcef64;
+  padding-left: 10px;
+  font-size: large;
+  height: 50px;
+}
+.price{
+  position: relative;
+  top: 17px;
+}
+.ver-mas{
+  cursor: pointer;
+  color: #206000;
+}
+.ver-mas:hover{
+  text-decoration: underline;
+}
+dialog {
+  background-color: rgb(32, 221, 82);
+  color: white;
+  border-color: transparent;
+  overflow: hidden !important;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+  height: 300px;
+  width: 250px;
+}
+.paginacion{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+.icono{
+  position: relative;
+  width: 15px;
+}
+
+.boton-nuevo {
+  background-color: #206000;
+  padding: 10px 10px;
+  color: #F9F9F9;
+  border-radius:5px;
+}
+.boton-nuevo:hover {
+  background-color: #2c7c04;
+  padding: 10px 10px;
+  color: #F9F9F9;
+  border-radius:5px;
+  box-shadow: 2px 2px 5px #206000;
+}
+.padre{
+  position: relative;
+  background-color: #e7f6cc;
+  box-shadow: 3px 3px 10px #206000;
+}
+.hijo{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5px;
+}
+.descripcion{
+  height: 50px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.categorias{
+  position: relative;
+  border: 1px solid #206000;
+  padding: 7px 30px 6px 6px;
+  color: #206000;
+  justify-content: center;
+}

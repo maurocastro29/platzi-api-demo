@@ -1,0 +1,231 @@
+<app-header></app-header>
+<div class="container mx-auto">
+    <div class="flex justify-center items-center mb-10">
+      <div class="titulo mt-4 px-5 rounded-lg border tarjeta">
+        <h3 class="flex justify-center mx-auto"> {{ messages.home.tarjeta.msgTarjeta1 }}</h3>
+        <a class="flex justify-center mx-auto color-azul" href="https://fakeapi.platzi.com/" target="_blank"> {{ messages.home.tarjeta.msgTarjeta2 }} </a>
+        <h4 class="flex justify-center mx-auto"> {{ messages.home.tarjeta.msgTarjeta3 }} </h4>
+      </div>
+    </div>
+    <div class="mt-6 endpints-usados">
+      <p class="flex justify-center mx-auto"> {{messages.home.serviciosConsumidos}} </p>
+      <div class="mt-10">
+        <div class="px-3 mb-5">
+          <p class="cursor-pointer" (click)="toggleUser()">
+            <img style="display: inline;" [src]='!showUser ? "assets/iconos/ic-flecha-ampliar.png" : "assets/iconos/ic-flecha-contraer.png"' alt="Contraer - Expandir">
+            {{messages.home.users.titulo}}
+          </p>
+          <div [@accordion]="showUser ? 'expanded' : 'collapsed'" class="px-5  pt-3">
+            <span> {{messages.home.users.getAll}} </span>
+            <div class="endpoints mt-1 px-5 pt-4 pb-1 mb-5 rounded shadow-lg">
+              <p>
+                <img class="cursor-pointer" (click)="toggleGetAllUser()" style="display: inline;" [src]='!showGetAllUSers ? "assets/iconos/ic-flecha-ampliar.png" : "assets/iconos/ic-flecha-contraer.png"' alt="Contraer - Expandir">
+                {{messages.home.http.get}} - https://api.escuelajs.co/api/v1/users</p>
+              <div [@accordion]="showGetAllUSers ? 'expanded' : 'collapsed'" >
+                <p>{{messages.home.response}}</p>
+                <div class="p-3 border rounded" *ngIf="jsonDataGetAllUser">
+                  <pre>{{ jsonDataGetAllUser | json }}</pre>
+                </div>
+              </div>
+            </div>
+            <span class="separacion-superior"> {{messages.home.users.getSingle}} </span>
+            <div class="endpoints mt-1 px-5 pt-4 pb-1 mb-3 rounded shadow-lg">
+              <p  class="cursor-pointer" (click)="toggleGetSingleUser()">
+                <img style="display: inline;" [src]='!showGetSingleUSers ? "assets/iconos/ic-flecha-ampliar.png" : "assets/iconos/ic-flecha-contraer.png"' alt="Contraer - Expandir">
+                {{messages.home.http.get}} - https://api.escuelajs.co/api/v1/users/1</p>
+              <div [@accordion]="showGetSingleUSers ? 'expanded' : 'collapsed'">
+                <p>{{messages.home.response}}</p>
+                <div class="p-3 border rounded" *ngIf="jsonDataGetSingleUser">
+                  <pre>{{ jsonDataGetSingleUser | json }}</pre>
+                </div>
+              </div>
+            </div>
+            <span> {{messages.home.users.createUser}} </span>
+            <div class="endpoints mt-1 px-5 pt-4 pb-3 mb-3 rounded shadow-lg">
+              <p class="cursor-pointer" (click)="toggleCreateUser()">
+                <img style="display: inline;" [src]='!showCreateUSers ? "assets/iconos/ic-flecha-ampliar.png" : "assets/iconos/ic-flecha-contraer.png"' alt="Contraer - Expandir">
+                {{messages.home.http.post}} - https://api.escuelajs.co/api/v1/users/</p>
+              <div [@accordion]="showCreateUSers ? 'expanded' : 'collapsed'">
+                <p>{{messages.home.request}}</p>
+                <p>{{messages.home.body}}</p>
+                <div class="p-3 mb-3 border rounded" *ngIf="jsonDataCreateUser">
+                  <pre>{{ jsonDataCreateUser | json }}</pre>
+                </div>
+                <p>{{messages.home.response}}</p>
+                <div class="p-3 border rounded" *ngIf="jsonDataCreateUserResponse">
+                  <pre>{{ jsonDataCreateUserResponse | json }}</pre>
+                </div>
+              </div>
+            </div>
+            <span> {{messages.home.users.updateUser}} </span>
+            <div class="endpoints mt-1 px-5 pt-4 pb-3 mb-3 rounded shadow-lg">
+              <p class="cursor-pointer" (click)="toggleUpdateUser()">
+                <img style="display: inline;" [src]='!showUpdateUSers ? "assets/iconos/ic-flecha-ampliar.png" : "assets/iconos/ic-flecha-contraer.png"' alt="Contraer - Expandir">
+                {{messages.home.http.put}} - https://api.escuelajs.co/api/v1/users/1</p>
+              <div [@accordion]="showUpdateUSers ? 'expanded' : 'collapsed'">
+                <p>{{messages.home.request}}</p>
+                <p>{{messages.home.body}}</p>
+                <div class="p-3 mb-3 border rounded" *ngIf="jsonDataUpdateUser">
+                  <pre>{{ jsonDataUpdateUser | json }}</pre>
+                </div>
+                <p>{{messages.home.response}}</p>
+                <div class="p-3 border rounded" *ngIf="jsonDataUpdateUserResponse">
+                  <pre>{{ jsonDataUpdateUserResponse | json }}</pre>
+                </div>
+              </div>
+            </div>
+            <span> {{messages.home.users.checkEmail}} </span>
+            <div class="endpoints mt-1 px-5 pt-4 pb-3 mb-3 rounded shadow-lg">
+              <p class="cursor-pointer" (click)="toggleCheckEmailUser()">
+                <img style="display: inline;" [src]='!showCheckEmailUSers ? "assets/iconos/ic-flecha-ampliar.png" : "assets/iconos/ic-flecha-contraer.png"' alt="Contraer - Expandir">
+                {{messages.home.http.post}} - https://api.escuelajs.co/api/v1/users/is-available</p>
+              <div [@accordion]="showCheckEmailUSers ? 'expanded' : 'collapsed'">
+                <p>{{messages.home.request}}</p>
+                <p>{{messages.home.body}}</p>
+                <div class="p-3 mb-3 border rounded" *ngIf="jsonDataCheckEmailUser">
+                  <pre>{{ jsonDataCheckEmailUser | json }}</pre>
+                </div>
+                <p>{{messages.home.response}}</p>
+                <div class="p-3 border rounded" *ngIf="jsonDataCheckEmailUserResponse">
+                  <pre>{{ jsonDataCheckEmailUserResponse | json }}</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <br>
+      <div class="px-3 mb-5">
+        <p class="cursor-pointer" (click)="toggleProducts()">
+          <img style="display: inline;" [src]='!showProducts ? "assets/iconos/ic-flecha-ampliar.png" : "assets/iconos/ic-flecha-contraer.png"' alt="Contraer - Expandir">
+          {{messages.home.products.titulo}}
+        </p>
+        <div [@accordion]="showProducts ? 'expanded' : 'collapsed'" class="px-5 pt-3">
+          <span> {{messages.home.products.getAll}} </span>
+          <div class="endpoints mt-1 px-5 pt-4 pb-1 mb-5 rounded shadow-lg">
+            <p class="cursor-pointer" (click)="toggleAllProducts()">
+              <img style="display: inline;" [src]='!showAllProducts ? "assets/iconos/ic-flecha-ampliar.png" : "assets/iconos/ic-flecha-contraer.png"' alt="Contraer - Expandir">
+              {{messages.home.http.get}} - https://api.escuelajs.co/api/v1/products</p>
+            <div [@accordion]="showAllProducts ? 'expanded' : 'collapsed'">
+              <p>{{messages.home.response}}</p>
+              <div class="p-3 border rounded" *ngIf="jsonDataGetAllProducts">
+                <pre>{{ jsonDataGetAllProducts | json }}</pre>
+              </div>
+            </div>
+          </div>
+          <span> {{messages.home.products.getSingle}} </span>
+          <div class="endpoints mt-1 px-5 pt-4 pb-1 mb-5 rounded shadow-lg">
+            <p class="cursor-pointer" (click)="toggleSingleProducts()">
+              <img style="display: inline;" [src]='!showSingleProduct ? "assets/iconos/ic-flecha-ampliar.png" : "assets/iconos/ic-flecha-contraer.png"' alt="Contraer - Expandir">
+              {{messages.home.http.get}} - https://api.escuelajs.co/api/v1/products/4
+            </p>
+            <div [@accordion]="showSingleProduct ? 'expanded' : 'collapsed'">
+              <p>{{messages.home.response}}</p>
+              <div class="p-3 border rounded" *ngIf="jsonDataGetSingleProducts">
+                <pre>{{ jsonDataGetSingleProducts | json }}</pre>
+              </div>
+            </div>
+          </div>
+          <span> {{messages.home.products.createProduct}} </span>
+          <div class="endpoints mt-1 px-5 pt-4 pb-3 mb-3 rounded shadow-lg">
+            <p class="cursor-pointer" (click)="toggleCreateProduct()">
+              <img style="display: inline;" [src]='!showCreateProduct ? "assets/iconos/ic-flecha-ampliar.png" : "assets/iconos/ic-flecha-contraer.png"' alt="Contraer - Expandir">
+              {{messages.home.http.post}} - https://api.escuelajs.co/api/v1/products/
+            </p>
+            <div [@accordion]="showCreateProduct ? 'expanded' : 'collapsed'">
+              <p>{{messages.home.request}}</p>
+              <p>{{messages.home.body}}</p>
+              <div class="p-3 mb-3 border rounded" *ngIf="jsonDataCreateProduct">
+                <pre>{{ jsonDataCreateProduct | json }}</pre>
+              </div>
+              <p>{{messages.home.response}}</p>
+              <div class="p-3 border rounded" *ngIf="jsonDataCreateProductResponse">
+                <pre>{{ jsonDataCreateProductResponse | json }}</pre>
+              </div>
+            </div>
+          </div>
+          <span> {{messages.home.products.updateProduct}} </span>
+          <div class="endpoints mt-1 px-5 pt-4 pb-3 mb-3 rounded shadow-lg">
+            <p class="cursor-pointer" (click)="toggleUpdateProduct()">
+              <img style="display: inline;" [src]='!showUpdateProduct ? "assets/iconos/ic-flecha-ampliar.png" : "assets/iconos/ic-flecha-contraer.png"' alt="Contraer - Expandir">
+              {{messages.home.http.put}} - https://api.escuelajs.co/api/v1/products/1
+            </p>
+            <div [@accordion]="showUpdateProduct ? 'expanded' : 'collapsed'">
+              <p>{{messages.home.request}}</p>
+              <p>{{messages.home.body}}</p>
+              <div class="p-3 mb-3 border rounded" *ngIf="jsonDataCreateProduct">
+                <pre>{{ jsonDataCreateProduct | json }}</pre>
+              </div>
+              <p>{{messages.home.response}}</p>
+              <div class="p-3 border rounded" *ngIf="jsonDataCreateProductResponse">
+                <pre>{{ jsonDataCreateProductResponse | json }}</pre>
+              </div>
+            </div>
+          </div>
+          <span> {{messages.home.products.deleteProduct}} </span>
+          <div class="endpoints mt-1 px-5 pt-4 pb-3 mb-3 rounded shadow-lg">
+            <p class="cursor-pointer" (click)="toggleDeleteProduct()">
+              <img style="display: inline;" [src]='!showDeleteProduct ? "assets/iconos/ic-flecha-ampliar.png" : "assets/iconos/ic-flecha-contraer.png"' alt="Contraer - Expandir">
+              {{messages.home.http.delete}} - https://api.escuelajs.co/api/v1/products/1
+            </p>
+            <div  [@accordion]="showDeleteProduct ? 'expanded' : 'collapsed'">
+              <p>{{messages.home.response}}</p>
+              <div class="p-3 border rounded" *ngIf="jsonDataCreateProductResponse">
+                <pre>true</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <br>
+      <div class="px-3 mb-5">
+        <p class="cursor-pointer" (click)="toggleCategories()">
+          <img style="display: inline;" [src]='!showCategories ? "assets/iconos/ic-flecha-ampliar.png" : "assets/iconos/ic-flecha-contraer.png"' alt="Contraer - Expandir">
+          {{messages.home.categories.titulo}}
+        </p>
+        <div [@accordion]="showCategories ? 'expanded' : 'collapsed'" class="px-5 pt-3">
+          <span> {{messages.home.categories.getAll}} </span>
+          <div class="endpoints mt-1 px-5 pt-4 pb-1 mb-5 rounded shadow-lg">
+            <p  class="cursor-pointer" (click)="toggleGetAllCategories()">
+              <img style="display: inline;" [src]='!showAllCategories ? "assets/iconos/ic-flecha-ampliar.png" : "assets/iconos/ic-flecha-contraer.png"' alt="Contraer - Expandir">
+              {{messages.home.http.get}} - https://api.escuelajs.co/api/v1/categories</p>
+            <div [@accordion]="showAllCategories ? 'expanded' : 'collapsed'">
+              <p>{{messages.home.response}}</p>
+              <div class="p-3 border rounded" *ngIf="jsonDataGetAllCategories">
+                <pre>{{ jsonDataGetAllCategories | json }}</pre>
+              </div>
+            </div>
+          </div>
+          <span> {{messages.home.categories.getSingle}} </span>
+          <div class="endpoints mt-1 px-5 pt-4 pb-1 mb-5 rounded shadow-lg">
+            <p class="cursor-pointer" (click)="toggleSingleProducts()">
+              <img style="display: inline;" [src]='!showSingleProduct ? "assets/iconos/ic-flecha-ampliar.png" : "assets/iconos/ic-flecha-contraer.png"' alt="Contraer - Expandir">
+              {{messages.home.http.get}} - https://api.escuelajs.co/api/v1/products/4
+            </p>
+            <div [@accordion]="showSingleProduct ? 'expanded' : 'collapsed'">
+              <p>{{messages.home.response}}</p>
+              <div class="p-3 border rounded" *ngIf="jsonDataGetSingleCategory">
+                <pre>{{ jsonDataGetSingleCategory | json }}</pre>
+              </div>
+            </div>
+          </div>
+          <span> {{messages.home.categories.getProductByCategory}} </span>
+          <div class="endpoints mt-1 px-5 pt-4 pb-1 mb-5 rounded shadow-lg">
+            <p class="cursor-pointer" (click)="toggleGetAllProductsByCategory()">
+              <img style="display: inline;" [src]='!showAllProductsByCategory ? "assets/iconos/ic-flecha-ampliar.png" : "assets/iconos/ic-flecha-contraer.png"' alt="Contraer - Expandir">
+              {{messages.home.http.get}} - https://api.escuelajs.co/api/v1/categories/1/products
+            </p>
+            <div [@accordion]="showAllProductsByCategory ? 'expanded' : 'collapsed'">
+              <p>{{messages.home.response}}</p>
+              <div class="p-3 border rounded" *ngIf="jsonDataGetAllProductsByCategory">
+                <pre>{{ jsonDataGetAllProductsByCategory | json }}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+</div>

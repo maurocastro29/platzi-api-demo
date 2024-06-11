@@ -1,0 +1,23 @@
+.main{
+  background-color: #E7F6CC;
+  z-index: 1;
+}
+.titulo{
+  background-color: #206000;
+  padding-top: 15px;
+  border-bottom: 1px solid #206000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+h2{
+  color: #E7F6CC;
+  font-size: 1.3em;
+  text-align: center;
+}
+.description-card{
+  padding: 15px;
+  font-size: 1.1em;
+  border-bottom: 1px solid #206000;
+}
+.botones{
+  color: #206000;
+}

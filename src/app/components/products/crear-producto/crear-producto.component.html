@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="flex justify-center mt-12 pb-12">
+  <div class="main">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div class="titulo">
+        <h2> {{ messages.crearProducto.titulo }} </h2>
+      </div>
+      <div class="cuerpo">
+        <div class="relative mb-4">
+          <label for="titulo" class="leading-7 text-sm text-gray-600">{{ messages.crearProducto.lblTitulo }}</label>
+          <input type="text" id="titulo" formControlName="title" placeholder="{{ messages.crearProducto.placeHolder.titulo }}" required class="w-full bg-white rounded border  focus:ring-2  text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+        <div class="relative mb-4">
+          <label for="titulo" class="leading-7 text-sm text-gray-600">{{ messages.crearProducto.lblPrecio }}</label>
+          <input type="number" id="price" formControlName="price" placeholder="{{ messages.crearProducto.placeHolder.precio }}" required class="w-full bg-white rounded border  focus:ring-2  text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+        <div class="relative mb-4">
+          <label for="message" class="leading-7 text-sm text-gray-600">{{ messages.crearProducto.lblDescripcion }}</label>
+          <textarea id="description" formControlName="description" placeholder="{{ messages.crearProducto.placeHolder.descripcion }}" required class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+        </div>
+        <button type="submit">{{ messages.crearProducto.btnEnviar }}</button>
+      </div>
+    </form>
+  </div>
+</div>
+

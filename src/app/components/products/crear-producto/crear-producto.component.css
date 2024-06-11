@@ -1,0 +1,80 @@
+
+.main {
+  max-width: 450px; /* Ancho fijo de 450px */
+  box-shadow: 10px 10px 27px #97C93E;
+  border: 1px solid #c1c1c1;
+  background-color: #bcef64;
+  border-radius: 0px 0px 10px 10px;
+}
+.titulo{
+  background-color: #206000;
+  padding: 15px 15px 1px 15px;
+  color: #F9F9F9;
+  text-align: center;
+  font-size: 1.5em;
+  top: 10px;
+}
+.cuerpo{
+  padding: 15px;
+}
+.titulo h2{
+  font-size: 1.3em;
+}
+h1{
+  text-align: center;
+}
+.input-titulo{
+  color: #206000;
+  background-color: #C1C1C1;
+  width: 100%;
+}
+label{
+  color: #206000;
+}
+.main textarea{
+  width: 400px;
+  height: 100px;
+}
+input[type="text"],
+input[type="number"],
+textarea {
+  width: calc(100% - 20px); /* Ancho del input menos el padding */
+  padding: 10px; /* Padding deseado */
+  background-color: #F9F9F9;
+  color: #206000;
+  border-radius: 4px;
+}
+button[type="submit"]{
+  padding: 8px 35px;
+  display: block; /* Convertir el botón en un bloque para centrarlo */
+  margin: 5px auto 5px;
+  font-size: 1.2em;
+  background-color: #206000;
+  color: #F9F9F9;
+  box-shadow: 3px 3px 7px #206000;
+  border-radius: 5px;
+}
+button[type="submit"]:hover{
+  padding: 8px 35px;
+  display: block; /* Convertir el botón en un bloque para centrarlo */
+  margin: 5px auto 5px;
+  background-color: #206000;
+  color: #C1C1C1;
+  box-shadow: 3px 3px 10px #206000;
+  border-radius: 8px;
+}
+button[type="button"]{
+  padding-top: 18px;
+  display: block; /* Convertir el botón en un bloque para centrarlo */
+  margin: 5px auto 5px;
+  font-size: 1.4em;
+  color: #206000;
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+label{
+  position: relative;
+  text-align: left;
+}

@@ -1,0 +1,45 @@
+.main{
+margin: 25px;
+}
+.titulo{
+  color: #f9f9f9;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 20px;
+  background-color: #206000;
+  padding: 15px;
+}
+.datos div p{
+  display: inline;
+}
+.avatar{
+  margin-bottom: 25px;
+}
+.avatar img{
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+.botones{
+  margin-top: 30px ;
+  padding: 15px 25px;
+  background-color: #f9f9f9;
+  box-shadow: 4px 4px 10px #206000;
+}
+.boton-cerrar{
+  padding: 5px 20px;
+  border-radius: 3px;
+}
+.boton-cerrar:hover{
+  padding: 5px 20px;
+  background-color: #206000;
+  color: #f9f9f9;
+}
+.titulo-label{
+  color: #206000;
+}
+hr{
+  border-color: #97C93E;
+  margin-bottom: 15px;
+}

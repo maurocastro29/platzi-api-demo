@@ -1,0 +1,26 @@
+
+<app-header></app-header>
+<div class="flex justify-center mt-12 pb-12">
+  <div class="main">
+
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div class="titulo">
+        <h2> {{ messages.editarProducto.titulo }} </h2>
+      </div>
+      <div class="contenido">
+        <label>{{ messages.editarProducto.lblTitulo }}</label>
+        <input class="input-titulo" type="text" formControlName="titulo" placeholder="{{ messages.editarProducto.placeHolder.titulo }}"><br><br>
+        <label>{{ messages.editarProducto.lblPrecio }}</label><br>
+        <input type="number" formControlName="price" placeholder="{{ messages.editarProducto.placeHolder.precio }}"><br><br>
+        <label>{{ messages.editarProducto.lblDescripcion }}</label><br>
+        <textarea class=".text-area" formControlName="descripcion" placeholder="{{ messages.editarProducto.placeHolder.descripcion }}"></textarea><br><br>
+        <button type="submit">{{ messages.editarProducto.btnEnviar }}</button>
+        <button type="button" (click)="volver()">{{ messages.editarProducto.cancelar }}</button>
+      </div>
+    </form>
+    <div *ngIf="errorActualizarProducto">
+      <p>{{ messages.editarProducto.msgError }}</p>
+    </div>
+
+  </div>
+</div>

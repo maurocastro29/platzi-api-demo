@@ -1,0 +1,86 @@
+
+.main{ /* Centrado vertical */
+  position: relative;
+  height: 100vh;
+  text-align: center;
+}
+.contenido{
+  position: relative;
+  top: 30px;
+}
+.contactame{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+hr{
+  width: 35%;
+  margin: auto;
+  border-color: #97C93E;
+}
+p{
+  color: #206000;
+}
+.imagen{
+  margin-top: 20px;
+}
+.imagen img{
+  width: 30px;
+  margin: 0px 10px;
+}
+.contacto *{
+  display: inline-block;
+}
+.contacto img{
+  position: relative;
+  top: 10px;
+}
+.social-media{
+  margin-top: 30px;
+}
+
+/* Estilos para pantallas más pequeñas que 320px de ancho */
+@media (max-width: 320px) {
+  .contenido {
+    margin: auto;
+    width: 90%; /* Ancho fijo de 450px */
+    box-shadow: 2px 2px 5px #206000;
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
+
+/* Estilos para pantallas entre 321px y 767px de ancho */
+@media (min-width: 321px) and (max-width: 767px) {
+  .contenido {
+    margin: auto;
+    width: 70%; /* Ancho fijo de 450px */
+    box-shadow: 5px 5px 10px #206000;
+    padding: 15px;
+    border-radius: 7px;
+  }
+}
+
+/* Estilos para pantallas de al menos 768px de ancho */
+@media (min-width: 768px) and (max-width: 1027px) {
+  .contenido {
+    margin: auto;
+    width: 60%; /* Ancho fijo de 450px */
+    box-shadow: 5px 5px 10px #206000;
+    padding: 15px;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 1028px) {
+  .contenido {
+    margin: auto;
+    width: 50%; /* Ancho fijo de 450px */
+    box-shadow: 7px 7px 15px #206000;
+    padding: 15px;
+    border-radius: 15px;
+  }
+}
+strong{
+  position: relative;
+  top:10px;
+}

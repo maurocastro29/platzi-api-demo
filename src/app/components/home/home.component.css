@@ -1,0 +1,45 @@
+
+.titulo{
+  background-color: #206000;
+}
+.titulo h3{
+  margin-top: 15px;
+  color: #f9f9f9;
+  font-size: 1.6rem;
+}
+.titulo h4{
+  margin-top: 15px;
+  color: #f9f9f9;
+  font-size: 0.95rem;
+  height: auto;
+}
+.color-azul{
+  color: #3D50F5;
+  font-size: 1.4rem;
+}
+.endpints-usados{
+  font-size: 2em;
+  color: #206000;
+}
+.endpoints{
+  background-color: #eaeaea;
+  border: 1px solid #206000;
+}
+.endpoints p{
+  font-size: 1rem;
+  color: #2c2c2c;
+}
+.endpoints div{
+  color: #0d2302;
+  font-size: 1rem;
+  border-color: #0d2302;
+  margin-bottom: 10px;
+}
+.separacion-superior{
+  margin-top: 15px;;
+}
+.tarjeta{
+  box-shadow: 2px 2px 5px #206000;
+  min-width: 50%;
+  max-width: 90%;
+}
