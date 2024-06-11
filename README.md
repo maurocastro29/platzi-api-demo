@@ -8,7 +8,7 @@ Paso 1: Clonar el Repositorio
 1. Abre tu terminal o línea de comandos.
 2. Navega a la ubicación donde deseas clonar el repositorio.
 3. Utiliza el siguiente comando para clonar el repositorio desde GitHub:
-   git clone https://github.com/usuario/nombre-del-repositorio.git
+   git clone https://github.com/maurocastro29/platzi-api-demo.git
    
 Paso 2: Instalar Dependencias
 Una vez que el repositorio se haya clonado en tu PC, navega al directorio del proyecto clonado usando la terminal o línea de comandos. Por ejemplo:
@@ -30,6 +30,9 @@ Este comando compilará el proyecto y lo servirá localmente en tu máquina. Por
 
 Paso 4: Acceder a la Aplicación
 Abre tu navegador web y navega a http://localhost:4200/ para ver la aplicación en funcionamiento.
+
+Nota: 
+   Para los estilos en este proyecto se usó Tailwind y CSS personalizados en cada componente
 
 
 # platzi-api-demo
